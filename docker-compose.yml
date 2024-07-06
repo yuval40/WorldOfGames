@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  my-wog-app:
+    build: .
+    ports:
+      - "8777:5000"
+    volumes:
+      - ./MainScore.py:/app/MainScore.py
+      - ./Scores.txt:/Scores.txt
+    environment:
+      - FLASK_ENV=development
+    restart: always
+    image: worldofgames:wog

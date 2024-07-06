@@ -1,0 +1,6 @@
+For running the Dockerfile with the desired allocated port:
+docker build -t wog .
+docker run -d --name WorldOfGames -p 5000:5000 wog
+
+For running the yml file:
+docker-compose -p worldofgames up -d
